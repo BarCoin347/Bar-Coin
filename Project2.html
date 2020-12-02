@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bar Coin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="Project2.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <link rel="icon" type="image/jpg" href="logo_coin.png"/>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <p class="navbar-brand">Bar Coin</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><button id="home" class="navigatorBtn" onclick="showHomePage()">
+                        <span class="glyphicon glyphicon-home"></span>
+                        Home</button></li>
+                <li><button id="liveReprts" class="navigatorBtn" onclick="checkIfChooseCoinToLiveReports()">
+                        <span class="glyphicon glyphicon-stats"></span>
+                        Live reports</button></li>
+                <li><button id="about" class="navigatorBtn" onclick="showAbout()">
+                        <span class="glyphicon glyphicon-user"></span>
+                        About</button></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <div class="navbar-form navbar-left">
+                    <input type="text" id="symbolSearch" class="form-control" placeholder="Search">
+                    <button class="form-control" id="searchButton" type="submit" onclick="showSearchResults()">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+                <li id="BSD">בס"ד</li>
+            </ul>
+        </div>
+    </nav>
+    <div class="page">
+        <h1 id="title">Cryptonite</h1>
+    </div>
+    <div class="container" id="container"></div>
+    <div class="liveReports" id="liveReports"></div>
+    <div class="faildLiveReports" id="faildLiveReports">
+        <p class="noCoinChoose">
+            <h1 id="noCoinChooseTitle">you must first select at least one currency to track from <a onclick="showHomePage()" style="cursor: pointer">Home page</a></h1>
+            <img src="2020-11-30 (6).png" class="noCoinChooseImg">
+        </p>
+    </div>
+    <div class="aboutMe" id="aboutMe">
+        <div class="aboutMeDiv">
+            <p id="aboutMeP">
+                שלום, שמי בר קצנטיני<br>
+                בן 25, גר בנתניה, נשוי + 3 (סתם נו.. אני עדיין רווק)<br>
+                מוטו לחיים: יש רק מלך אחד וזה זוהר ארגוב<br>
+                <br>
+                יאללה, עכשיו ברצינות<br>
+                למדתי באורט גוטמן, נתניה. יש לי 12 שנ"ל ובגרות מלאה + הרחבה במגמת מדעי המחשב<br>
+                לאחר הלימודים, בשנת 2014, התגייסתי לצה"ל ושירתתי 4 וחצי שנים בחיל המשטרה הצבאית, יחידת מצ"ח<br>
+                תחילה בתור בלש, לאחר כשנתיים התגלה לי גידול במוח וכתוצאה מכך נפסל לי התפקיד והמשכתי בשירות בתור נגד
+                ניהול וארגון של יחידת מצ"ח<br>
+                בשנת 2017 התגייסתי לקבע באותו תפקיד, ביחידה המיוחדת של מצ"ח<br>
+                בשנת 2018, השנה המשמעותית ביותר בחיי, עברתי ניתוח מוח להוצאת הגידול<br>
+                הניתוח לא עבר כמו שתכננו ועברתי בגלל זה 4 ניתוחים נוספים<br>
+                לאחר כחודש, גילינו שהגידול סרטני<br>
+                עברתי שיקום ממושך, קצת יותר משנה, בבית חולים לוינשטיין<br>
+                במהלך השיקום גיליתי אהבה חדשה ומפתיעה, פסנתר<br>
+                מאז, אין יום אחד בלי שעה אחת לפחות על הפסנתר<br>
+                למדתי יסודות בהלחנה ונגינה במכללת<br>
+                BPM<br>
+                שבתל אביב, קורס של חצי שנה<br>
+                מסקנה מהתקופה הזאת: הכל בחיים זה גישה! אם תנסו מספיק, תמצאו את הטוב גם בדבר הכי נורא<br>
+                לפני כשנה חיפשתי את עצמי בתחום היהלומים<br>
+                עברתי קורס של חצי שנה במכללת<br>
+                IGL<br>
+                שבבורסה ברמת גן, קורס ביהלומים מלוטשים<br>
+                והיום, הגעתי למסקנה שבמקום לחפש את עצמי בכל מיני מקומות, הדבר הנכון הוא לחזור למה שלמדתי בבית ספר וכל כך
+                אהבתי<br>
+                וכעת אני לומד בג'ון ברייס, קורס<br>
+                Full stuck<br>
+                עם מרצה מטורף שיודע כל כך הרבה ונחמד וכייפי ואחלה גבר (אולי אקבל תוספת של כמה נקודות בציון)<br>
+                מקווה שתהנו מהאתר :)<br>
+            </p>
+        </div>
+        <br>
+        <img src="אני.jpg" class="myPhoto">
+        <br><br><br>
+    </div>
+    <div class="faildSearch" id="faildSearch">
+        <p class="faildSearchP">
+            <img src="ohNo.png" class="imgFaild">
+        <h1 class="notFind">oh no</h1>
+        <h1 class="notFind">No coin found</h1>
+        <h1 class="notFind"><strong>Note:</strong> The search is performed using the currency symbol name</h1>
+        </p>
+    </div>
+    <!-- <div class="optionsSearch" id="optionsSearch">
+        <p class="optionsSearchP">
+            <img src="emoj_iדסד.jpg" class="imgOptions">
+            <h1 class="notFind">The currency you were looking for is not found.</h1>
+            <h1 class="notFind">However, the currency exists in the system.</h1>
+            <h1 class="notFind">Because this currency is not selected for tracking, the search does not display it.</h1>
+            <h1 class="notFind">Would you like to view it anyway?</h1> 
+            <button type="button" class="confirnSearch" id="confirnSearch" value="YES" onclick="showSearchResults()"></button>   
+            <button type="button" class="cencelSearch" id="cencelSearch" value="NO" onclick="showHomePage()"></button>
+        </p>
+    </div> -->
+    <div id="myModal" class="modal">
+        <div class="modal-content" id="modalDiv">
+            <div class="modal-header">
+                <span id="buttonX" class="close">&times;</span>
+                <h3 id="firstTitleModal">I'm sorry, this is too much for me (and for you ..)</h3>
+            </div>
+            <div class="modal-body" id="modalBodyTitle">
+                <h3 id="secondTitleModal">You can only select 5 coins to track. To continue, you must unsubscribe from
+                    one of the currencies you have marked.</h3>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+            <div class="modal-footer">
+                <div id="noteCancleModalDiv">
+                    <h4 id="noteCancleModal"><strong>Note: </strong>If you click Cancel, the track list will remain as
+                        it was</h4>
+                </div>
+                <button type="button" class="confirnButtonInModal" id="confirnButtonInModal"
+                    onclick="confirnChangeModal()">Confirn</button>
+                <button type="button" class="cancleButtonInModal" id="cancleButtonInModal"
+                    onclick="cancleChangeModal()">Cancle</button>
+            </div>
+        </div>
+    </div>
+    <script src="Project2.js"></script>
+</body>
+
+</html>
