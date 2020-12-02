@@ -1,0 +1,429 @@
+body{
+    background-image: url("images.jpg");
+    background-position-y: -10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.page{
+    margin-top: 50px;
+}
+#BSD{
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: snow;
+    opacity: 0.7;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+}
+#title{
+    text-align: center;
+    font-size: 100px;
+    text-shadow: 5px 1px black;
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    letter-spacing: 30px;
+    opacity: 0.8;
+    text-decoration: underline;
+}
+.container-fluid{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: green;
+    background-color: black;
+    /* margin-bottom: 30px; */
+}
+.navigatorBtn{
+    margin-top: 13px;
+    font-size: 15px;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+}
+
+.navigatorBtn:hover{
+    background-color: green;
+    color: black;
+}
+.coinCard{
+    background-color: black;
+    border-radius: 8px;
+    width: 210px;
+    height: 150px;
+    opacity: 0.8;
+    color: green;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-color: green;
+    border-width: 3px;
+    border-style: ridge;
+    }
+.coinDetiles{
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: initial;
+}
+.row.row-cols-md-2.tab-pane.active{
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: block;
+    position: initial;
+}
+.moreInfo{
+    margin-top: 10px;
+    margin-left: 10px;
+    display: block;
+    border-radius: 8px;
+    background-color: green;
+    border-style: solid;
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    outline: none;
+    box-shadow: 0 3px #666;
+}
+.moreInfo:hover{
+    background-color: rgb(2, 110, 2);
+}
+.moreInfo:active {
+    background-color: rgb(2, 110, 2);;
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
+}
+@keyframes fadeIn{
+    from {
+        height: 150px;
+        
+    }
+    to {
+        height: 270px;
+    }
+}
+@keyframes fadeInButton{
+    from {
+        margin-top: 10px;
+    }
+    to {
+        margin-top: 130px;
+    }
+}
+@keyframes fadeOut{
+    from {
+        height: 270px;
+    }
+    to {
+        height: 150px;
+    }
+}
+@keyframes fadeOutButton{
+    from {
+        margin-top: 130px;
+    }
+    to {
+        margin-top: 10px;
+    }
+}
+@keyframes fadeInDetiles{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeOutDetiles{
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.divCoinValue{
+    opacity: 0;
+    animation: fadeInDetiles 2s forwards;
+    animation-delay: 200ms;
+    position: absolute;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+}
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color:white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: #2196F3;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+}
+.imgFaild{
+    width: 100px;
+    height: 100px;
+    margin: 0px 420px;
+    
+}
+.aboutMe{
+    display: none;
+}
+.aboutMeDiv{
+    background-color: black;
+    opacity: 0.8;
+    margin-right: 250px;
+    margin-left: 250px;
+    text-align: center;
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+}
+#aboutMeP{
+    text-align: center;
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+.myPhoto{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 350px;
+    height: 500px;
+}
+.faildSearch{
+    display: none;
+    background-color: black;
+    opacity: 0.8;
+    margin-right: 300px;
+    margin-left: 300px;
+}
+.toggleDiv{
+    direction: rtl;
+    margin-right: 10px;
+    margin-top: -28px;
+}
+.imgCoinDiv{
+    direction: rtl;
+    margin-right: 10px;
+    margin-top: -40px;
+}
+#imgCoin{
+    background-color: green;
+    width: 40px;
+    height: 40px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+.modal-content {
+    position: relative;
+    background-color: black;
+    margin: auto;
+    padding: 0;
+    border: 1px solid green;
+    width: 47%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+  }
+.close {
+    color: green;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+.close:hover,
+.close:focus {
+    color: green;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-header {
+    padding: 2px 16px;
+    color: green;
+    font-weight: bold;
+}
+.modal-body {
+    padding: 2px 16px;
+}
+.modal-footer {
+    padding: 2px 16px;
+    background-color: transparent;
+    color: white;
+}
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+#firstTitleModal, #secondTitleModal{
+    color: green;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+.confirnButtonInModal{
+    font-size: 17px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background-color: green;
+    border-color: black;
+    border-radius: 8px;
+    display: inline-block;
+}
+.cancleButtonInModal{
+    font-size: 17px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background-color: red;
+    border-color: black;
+    border-radius: 8px;
+    display: inline-block;
+}
+#modalBodyTitle{
+    background-color: transparent;
+}
+#noteCancleModal{
+    color: red;
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+#noteCancleModalDiv{
+    display: inline-block;
+    direction: ltr;
+    margin-right: 70px;
+}
+.loadindGIFDiv{
+    position: absolute;
+    opacity: 0.8;
+    margin-left: 80px;
+    margin-top: -30px;
+}
+.ilsIcon{
+    width: 20px;
+    height: 20px;
+    background-color: green;
+}
+.loadingAllCoin{
+    background-color: black;
+    opacity: 0.8;
+    color: green;
+}
+.loadinAllCoinImg{
+    width: 100px;
+    height: 100px;
+    opacity: 0.8;
+}
+.liveReports{
+    display: none;
+    height: 500px;
+    width: 100%;
+    background-color: transparent;
+}
+.faildLiveReports{
+    display: none;
+    background-color: black;
+    opacity: 0.8;
+    margin-right: 300px;
+    margin-left: 300px;
+}
+#noCoinChooseTitle{
+    text-align: center;
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+}
+.notFind{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: green;
+    font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+    .navigatorBtn {
+      width: 100%;
+    }
+    #title{
+        letter-spacing: 0px;
+        margin-top: 350px;
+        font-size: 75px;
+    }
+    .coinCard {
+        width: 100%;
+    }
+    .aboutMeDiv{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .faildSearch .optionsSearch{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .faildLiveReports{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+  }
+  .noCoinChooseImg{
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+  }
